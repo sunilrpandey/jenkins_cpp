@@ -1,17 +1,14 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                sh 'cd build'
-                sh 'make        '
+                sh 'echo building..'
             }
         }
         stage('Run') {
             steps {
-                sh 'cd build'
-                sh './01_override_new_delete.out'
+                sh 'echo running..'
             }
         }
     }
